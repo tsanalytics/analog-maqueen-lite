@@ -7,7 +7,7 @@ radio.onReceivedString(function (receivedString) {
     } else if (receivedString == "Down") {
         if (angle < 180) {
             angle += 1
-            maqueen.servoRun(maqueen.Servos.S1, 180)
+            maqueen.servoRun(maqueen.Servos.S1, 90)
         }
     } else if (receivedString == "LEDL") {
         maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOn)
