@@ -2,12 +2,12 @@ radio.onReceivedString(function (receivedString) {
     if (receivedString == "Open") {
         if (angle > 0) {
             angle += -1
-            maqueen.servoRun(maqueen.Servos.S1, angle)
+            servos.P0.setAngle(90)
         }
     } else if (receivedString == "Close") {
         if (angle < 180) {
             angle += 1
-            maqueen.servoRun(maqueen.Servos.S1, angle)
+            servos.P0.setAngle(90)
         }
     } else if (receivedString == "LEDL") {
         maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOn)
@@ -35,4 +35,4 @@ radio.onReceivedValue(function (name, value) {
 let angle = 0
 radio.setGroup(1)
 angle = 90
-maqueen.servoRun(maqueen.Servos.S1, angle)
+servos.P0.setAngle(90)
